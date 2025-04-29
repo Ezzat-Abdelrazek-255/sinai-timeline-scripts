@@ -64,6 +64,8 @@ function init() {
 
   const dates = gsap.utils.toArray(".timeline-date");
   const slides = gsap.utils.toArray(".timeline-slide");
+  console.log(dates);
+  console.log(slides);
 
   dates.forEach((date, i) => {
     gsap.to(date, {
