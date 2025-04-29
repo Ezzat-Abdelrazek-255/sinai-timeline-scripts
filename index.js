@@ -70,7 +70,6 @@ function init() {
         start: "top top",
         end: "top top",
         toggleActions: "play none reverse none",
-        markers: true,
       },
     });
   });
@@ -100,14 +99,11 @@ function init() {
       height: "50vh",
       scrollTrigger: {
         trigger: ".timeline-slide:first-child",
+        markers: true,
         scrub: 1,
         start: "top bottom",
         end: "+=1000",
       },
     },
-
-    gsap.set(".progress-bar", {
-      height: "0",
-    }),
   );
 }
