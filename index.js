@@ -61,4 +61,53 @@ function init() {
         ease: "power2.out",
       }),
   });
+
+  const dates = gsap.utils.toArray(".timeline-date");
+  const slides = gsap.utils.toArray(".timeline-slide");
+
+  dates.forEach((date, i) => {
+    gsap.to(date, {
+      background: "#d19d33",
+      color: "#002d72",
+
+      scrollTrigger: {
+        trigger: slides[i],
+        start: "top top",
+        end: "top top",
+        toggleActions: "play none reverse none",
+      },
+    });
+  });
+  gsap.fromTo(
+    ".progress-bar",
+    {
+      height: "50%",
+    },
+    {
+      height: "100%",
+      scrollTrigger: {
+        trigger: ".slide:last-child",
+        scrub: 1,
+        start: "top top",
+        end: "+=1000",
+        pin: true,
+      },
+    },
+  );
+
+  gsap.fromTo(
+    ".progress-bar",
+    {
+      height: "0%",
+    },
+    {
+      height: "50%",
+      scrollTrigger: {
+        trigger: ".slide:first-child",
+        scrub: 1,
+        start: "top bottom",
+        end: "+=1000",
+      },
+    },
+  );
 }
