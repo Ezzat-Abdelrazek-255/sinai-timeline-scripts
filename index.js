@@ -77,6 +77,7 @@ function init() {
         start: "top top",
         end: "top top",
         toggleActions: "play none reverse none",
+        markers: true,
       },
     });
   });
