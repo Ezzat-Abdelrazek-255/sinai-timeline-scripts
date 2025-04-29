@@ -77,12 +77,12 @@ function init() {
   gsap.fromTo(
     ".progress-bar",
     {
-      height: "50%",
+      height: "50vh",
     },
     {
       height: "100vh",
       scrollTrigger: {
-        trigger: ".slide:last-child",
+        trigger: ".timeline-slide:last-child",
         scrub: 1,
         start: "top top",
         end: "+=1000",
@@ -99,7 +99,7 @@ function init() {
     {
       height: "50vh",
       scrollTrigger: {
-        trigger: ".slide:first-child",
+        trigger: ".timeline-slide:first-child",
         scrub: 1,
         start: "top bottom",
         end: "+=1000",
