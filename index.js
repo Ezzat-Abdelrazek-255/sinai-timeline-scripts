@@ -62,7 +62,7 @@ function init() {
       }),
   });
 
-  const dates = gsap.utils.toArray(".timeline-date");
+  const dates = gsap.utils.toArray(".timeline-date-wrapper");
   const slides = gsap.utils.toArray(".timeline-slide");
   console.log(dates);
   console.log(slides);
