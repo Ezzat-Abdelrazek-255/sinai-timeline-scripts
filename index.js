@@ -64,8 +64,6 @@ function init() {
 
   const dates = gsap.utils.toArray(".timeline-date-wrapper");
   const slides = gsap.utils.toArray(".timeline-slide");
-  console.log(dates);
-  console.log(slides);
 
   dates.forEach((date, i) => {
     gsap.to(date, {
@@ -87,7 +85,7 @@ function init() {
       height: "50%",
     },
     {
-      height: "100%",
+      height: "100vh",
       scrollTrigger: {
         trigger: ".slide:last-child",
         scrub: 1,
@@ -104,7 +102,7 @@ function init() {
       height: "0%",
     },
     {
-      height: "50%",
+      height: "50vh",
       scrollTrigger: {
         trigger: ".slide:first-child",
         scrub: 1,
@@ -112,5 +110,9 @@ function init() {
         end: "+=1000",
       },
     },
+
+    gsap.set(".progress-bar", {
+      height: "0",
+    }),
   );
 }
