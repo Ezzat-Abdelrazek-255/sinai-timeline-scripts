@@ -21,11 +21,6 @@ function init() {
 
   requestAnimationFrame(raf);
 
-  // Log scroll data
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
-
   // Register GSAP plugin
   gsap.registerPlugin(ScrollTrigger);
 
